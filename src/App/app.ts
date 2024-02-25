@@ -6,7 +6,6 @@ export const FallBackState = styled.p`
 `;
 export const Main = styled.main`
   text-align: center;
-  margin: 2em auto;
   width: 100%;
   color: black;
 `;

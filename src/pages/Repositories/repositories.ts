@@ -25,7 +25,7 @@ export const TabsDropdownWrapper = styled.div`
 export const CardWrapper = styled.div`
   max-height: 83vh;
   overflow-y: auto;
-  background-color: #e0e0e0;
+  background-color: #D9D9D9;
   border-radius: 20px;
 `;
 export const CardGrid = styled.div`

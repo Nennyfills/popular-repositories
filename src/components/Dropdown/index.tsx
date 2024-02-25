@@ -21,7 +21,7 @@ const Dropdown = ({ options, handleChange }: dropdownProps) => {
   return (
     <StyledSelectWrapper>
       <StyledSelect onChange={handleChange}>
-        <option>Filter by language</option>
+        <option>Filter By Language</option>
         {options.map((value) => (
           <option key={value} value={value}>
             {value}

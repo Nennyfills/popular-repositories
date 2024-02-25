@@ -11,12 +11,13 @@ import {
   EmptyState,
   TabsDropdownWrapper,
 } from './repositories';
+import { popularRepo, starredRepo } from '@/constants/default';
 
 /**
  * Represents a component that displays repositories.
  */
 const Repositories = () => {
-  const [currentTab, setCurrentTab] = useState('Popular Repositories');
+  const [currentTab, setCurrentTab] = useState(popularRepo);
   const [language, seLanguage] = useState<string | null>(null);
   const [data, setData] = useState<RepoType[]>([]);
 
@@ -33,7 +34,7 @@ const Repositories = () => {
   }, []);
 
   const currentTabData: RepoType[] = useMemo(() => {
-    if (currentTab === 'Starred Repositories' && language) {
+    if (currentTab === starredRepo && language) {
       const combinedFilteredData = filterData(data, [
         starredCriteria,
         languageCriteria,
@@ -42,12 +43,13 @@ const Repositories = () => {
     } else if (language) {
       const filteredData = filterData(data, [languageCriteria]);
       return filteredData || [];
-    } else if (currentTab === 'Starred Repositories') {
+    } else if (currentTab === starredRepo) {
       const allStarredData = filterData(data, [starredCriteria]);
       return allStarredData || [];
     } else {
       return data || [];
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTab, data, language]);
 
   const uniqueLanguages: string[] = useMemo(
@@ -64,12 +66,16 @@ const Repositories = () => {
 
   const tabs = [
     {
-      name: 'Popular Repositories',
-      onClick: () => setCurrentTab('Popular Repositories'),
+      name: popularRepo,
+      onClick: () => setCurrentTab(popularRepo),
     },
     {
-      name: 'Starred Repositories',
-      onClick: () => setCurrentTab('Starred Repositories'),
+      name: starredRepo,
+      onClick: () => setCurrentTab(starredRepo),
+    },
+    {
+      name: 'Reset Language',
+      onClick: () => seLanguage(null),
     },
   ];
   return (

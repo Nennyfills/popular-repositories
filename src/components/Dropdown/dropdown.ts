@@ -6,14 +6,16 @@ export const StyledSelectWrapper = styled.div`
 `;
 
 export const StyledSelect = styled.select`
-  -webkit-appearance: none; /* Removes default chrome and safari style */
+  -webkit-appearance: none;
   -moz-appearance: none; /* Removes default style Firefox */
   appearance: none; /* Remove default browser styling */
-  background-color: #e0e0e0;
-  border: none;
-  padding: 10px 30px 10px 10px;
+  background-color: #DDD;
+  border: solid 2px #40934d;
+  color: black;
+  padding: 10px 35px 10px 20px;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 0.875em;
+  font-weight: 600;
   cursor: pointer;
   text-transform: capitalize;
   &:hover,

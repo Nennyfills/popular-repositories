@@ -57,7 +57,6 @@ export const StarWrapper = styled.footer`
   width: fit-content;
   border-radius: 20px;
   background-color: #fff;
-  border-radius: 20px;
   &:hover {
     background-color: #f0f0f0;
   }
@@ -68,6 +67,8 @@ export const Button = styled.button`
   border: none;
   border-radius: 20px 0 0 20px;
   background-color: #40934d;
+  font-size: 0.875em;
+  font-weight: 600;
   color: white;
   &:hover,
   &:active,
@@ -85,7 +86,8 @@ export const StarCount = styled.span`
 export const StyledStar = styled.span.withConfig({
   shouldForwardProp: (prop) => !['starCount'].includes(prop),
 })<starProps>`
-  font-size: 14px;
+  font-size: 0.875em;
+  font-weight: 600;
   color: transparent;
   -webkit-text-stroke: 1px white;
   text-stroke: 1px white;
