@@ -1,0 +1,96 @@
+import { RepoType } from '@/types/repo';
+
+export const testData: RepoType[] = [
+  {
+    id: '1',
+    name: 'John',
+    userHasStarred: true,
+    description: 'hey you',
+    html_url: 'http//:egg',
+    stargazers_count: 1,
+    language: 'js',
+  },
+  {
+    id: '2',
+    name: 'Jane',
+    userHasStarred: true,
+    description: 'hey you',
+    html_url: 'http//:pet',
+    stargazers_count: 1,
+    language: 'java',
+  },
+  {
+    id: '13',
+    name: 'John',
+    userHasStarred: true,
+    description: 'hey you',
+    html_url: 'http//:egg',
+    stargazers_count: 1,
+    language: 'js',
+  },
+  {
+    id: '12',
+    name: 'Jane',
+    userHasStarred: false,
+    description: 'hey you',
+    html_url: 'http//:pet',
+    stargazers_count: 1,
+    language: null,
+  },
+  {
+    id: '134',
+    name: 'John',
+    description: 'hey you',
+    html_url: 'http//:egg',
+    stargazers_count: 1,
+    language: 'js',
+  },
+  {
+    id: '142',
+    name: 'Jane',
+    userHasStarred: false,
+    description: 'hey you',
+    html_url: 'http//:pet',
+    stargazers_count: 1,
+    language: null,
+  },
+];
+
+export const testDataTwo: RepoType[] = [
+  {
+    id: '1',
+    name: 'John hill',
+    userHasStarred: true,
+    description: 'hey you',
+    html_url: 'http//:egg',
+    stargazers_count: 1,
+    language: 'js',
+  },
+  {
+    id: '2',
+    name: 'Jane bill',
+    userHasStarred: true,
+    description: 'hey you',
+    html_url: 'http//:pet',
+    stargazers_count: 1,
+    language: 'java',
+  },
+  {
+    id: '62',
+    name: 'Sun well',
+    userHasStarred: false,
+    description: 'is all code',
+    html_url: 'http//:code',
+    stargazers_count: 1,
+    language: 'Ts',
+  },
+
+  {
+    id: '624',
+    name: 'Jame Group',
+    description: 'Keep it up',
+    html_url: 'http//:up',
+    stargazers_count: 4099,
+    language: 'c++',
+  },
+];

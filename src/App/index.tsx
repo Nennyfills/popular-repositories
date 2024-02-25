@@ -1,3 +1,6 @@
+import { apiUrl } from '@/constants/default';
+import { useFetch } from '@/hooks';
+import { Repositories } from '@/pages';
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { FallBackState, Main } from './app';
@@ -6,13 +9,14 @@ import { FallBackState, Main } from './app';
  * The main component of the application.
  */
 const App = () => {
-  const loading = false;
-  const error = { massage: 'error' };
-  const data = [1];
+  const url = process.env.REACT_APP_API_URL || apiUrl;
+
+  const { loading, error, data } = useFetch(url);
+
   return (
     <Main>
       {loading ? <FallBackState>Loading...</FallBackState> : null}
-      {!loading && !data.length && error ? (
+      {!loading && !data && error ? (
         <FallBackState>
           Error:{' '}
           {(error as { massage: string })?.massage ||
@@ -24,7 +28,7 @@ const App = () => {
           path='/'
           element={
             <Suspense fallback={<FallBackState>Loading...</FallBackState>}>
-              <div>Hell</div>
+              <Repositories />
             </Suspense>
           }
         />
