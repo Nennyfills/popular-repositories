@@ -34,7 +34,7 @@ export const CardGrid = styled.div`
   grid-gap: 6px;
   padding: 6px;
   @media (max-width: 600px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 `;
 
