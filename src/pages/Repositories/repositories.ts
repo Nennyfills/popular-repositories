@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.main`
+export const Container = styled.section`
   margin: 0 auto;
   width: 80%;
   padding: 2em 0;
@@ -22,13 +22,13 @@ export const TabsDropdownWrapper = styled.div`
   }
 `;
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.section`
   max-height: 83vh;
   overflow-y: auto;
   background-color: #D9D9D9;
   border-radius: 20px;
 `;
-export const CardGrid = styled.div`
+export const CardGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 6px;
